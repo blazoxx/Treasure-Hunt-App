@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
+import { Text, View } from "react-native";
 
 // const styles = StyleSheet.create({
 //   container: {
@@ -23,11 +24,24 @@ import { StyleSheet, Text, View } from "react-native";
 // }
 
 const Index = () => {
-  return(
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#dbeafe'}}>
-      <Text style={{fontSize: 18, color: "blue"}}>Hello Tailwind</Text>
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#dbeafe",
+      }}
+    >
+      <Text style={{ fontSize: 18, color: "blue" }}>Hello Tailwind</Text>
+      <Link
+        href={"/about"}
+        style={{ marginTop: 20, fontSize: 16, color: "blue" }}
+      >
+        Go to About page
+      </Link>
     </View>
   );
-}
+};
 
 export default Index;

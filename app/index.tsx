@@ -33,7 +33,9 @@ const Index = () => {
         backgroundColor: "#dbeafe",
       }}
     >
-      <Text style={{ fontSize: 18, color: "blue" }}>Hello Tailwind</Text>
+      <Text style={{ fontSize: 18, fontWeight: "bold", color: "blue" }}>
+        Hello theB
+      </Text>
       <Link
         href={"/about"}
         style={{ marginTop: 20, fontSize: 16, color: "blue" }}

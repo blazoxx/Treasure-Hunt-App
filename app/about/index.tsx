@@ -8,14 +8,17 @@ const About = () => {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#dbea00",
+        backgroundColor: "#bbaaff",
       }}
     >
       <Text style={{ fontSize: 18, fontWeight: "bold", color: "blue" }}>
-        This is the about page
+        About theB
       </Text>
-      <Link href={"/"} style={{ marginTop: 20, fontSize: 16, color: "blue" }}>
-        Go to Index Page
+      <Link
+        href={"/"}
+        style={{ marginTop: 20, fontSize: 16, color: "blue" }}
+      >
+        Go to Index page
       </Link>
     </View>
   );

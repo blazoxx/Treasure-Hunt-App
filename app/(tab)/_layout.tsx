@@ -33,6 +33,7 @@ const tabRoot = () => {
         name="about"
         options={{
           title: "About",
+          tabBarLabel: () => null, // Hide label
           tabBarIcon: ({ color, size }) => {
             return (
               <View

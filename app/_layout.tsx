@@ -7,7 +7,7 @@ const rootLayout = () => {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer>
         <Drawer.Screen name="index" options={{ title: "Home" }} />
-        <Drawer.Screen name="about" options={{ title: "About" }} />
+        <Drawer.Screen name="About/index" options={{ title: "About" }} />
         <Drawer.Screen
           name="(tab)"
           options={{ title: "Tabs", headerShown: false }}

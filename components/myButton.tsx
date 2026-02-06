@@ -28,6 +28,8 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 35,
     borderRadius: 5,
+    width: "100%",
+    alignItems: "center",
   },
   text: {
     fontSize: 18,

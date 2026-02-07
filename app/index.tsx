@@ -1,7 +1,13 @@
 import MyButton from "@/components/myButton";
-import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
-import { Image, StyleSheet, Text, TextInput, View } from "react-native";
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 
 const Index = () => {
   const [value, setValue] = useState({
@@ -10,7 +16,7 @@ const Index = () => {
   });
 
   useEffect(() => {
-    console.log("Value was changed" );
+    console.log("Value was changed");
   }, [value?.value1]);
 
   const onRegister = () => {
@@ -19,7 +25,7 @@ const Index = () => {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
       <Image
         source={require("@/assets/images/logo.png")}
         style={styles.image}
@@ -31,19 +37,40 @@ const Index = () => {
           placeholder="Enter your email"
           style={styles.inputBox}
           onChangeText={(e) => {
-            setValue(prev => ({ ...prev, value1: e }));
+            setValue((prev) => ({ ...prev, value1: e }));
+          }}
+        />
+        <TextInput
+          placeholder="Enter your email"
+          style={styles.inputBox}
+          onChangeText={(e) => {
+            setValue((prev) => ({ ...prev, value1: e }));
+          }}
+        />
+        <TextInput
+          placeholder="Enter your email"
+          style={styles.inputBox}
+          onChangeText={(e) => {
+            setValue((prev) => ({ ...prev, value1: e }));
+          }}
+        />
+        <TextInput
+          placeholder="Enter your email"
+          style={styles.inputBox}
+          onChangeText={(e) => {
+            setValue((prev) => ({ ...prev, value1: e }));
           }}
         />
         <TextInput
           placeholder="Enter your password"
           style={styles.inputBox}
           onChangeText={(e) => {
-            setValue(prev => ({ ...prev, value2: e }));
+            setValue((prev) => ({ ...prev, value2: e }));
           }}
         />
         <MyButton title={"Continue"} onPress={onRegister} />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

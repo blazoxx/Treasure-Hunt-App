@@ -4,7 +4,7 @@
     "slug": "tros",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/butterfly.svg",
     "scheme": "tros",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,

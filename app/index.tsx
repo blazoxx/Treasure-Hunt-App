@@ -1,12 +1,21 @@
 import MyButton from "@/components/myButton";
 import { useRouter } from "expo-router";
+import { useEffect, useState } from "react";
 import { Image, StyleSheet, Text, TextInput, View } from "react-native";
 
 const Index = () => {
-  const router = useRouter();
+  const [value, setValue] = useState({
+    value1: "",
+    value2: "",
+  });
+
+  useEffect(() => {
+    console.log("Value was changed" );
+  }, [value?.value1]);
 
   const onRegister = () => {
-    router.navigate("/signup");
+    console.log(value?.value1);
+    console.log(value?.value2);
   };
 
   return (
@@ -18,8 +27,20 @@ const Index = () => {
       />
       <View style={styles.form}>
         <Text style={styles.text}>Hello Wandrer!</Text>
-        <TextInput placeholder="Enter your email" style={styles.inputBox} onChangeText={(e) => {console.log(e)}}/>
-        <TextInput placeholder="Enter your password" style={styles.inputBox} />
+        <TextInput
+          placeholder="Enter your email"
+          style={styles.inputBox}
+          onChangeText={(e) => {
+            setValue(prev => ({ ...prev, value1: e }));
+          }}
+        />
+        <TextInput
+          placeholder="Enter your password"
+          style={styles.inputBox}
+          onChangeText={(e) => {
+            setValue(prev => ({ ...prev, value2: e }));
+          }}
+        />
         <MyButton title={"Continue"} onPress={onRegister} />
       </View>
     </View>
@@ -47,7 +68,7 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 600,
   },
-  form: { 
+  form: {
     padding: 20,
     gap: 15,
   },
